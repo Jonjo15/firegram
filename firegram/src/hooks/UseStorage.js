@@ -19,9 +19,10 @@ const UseStorage = (file) => {
         }, 
         async() => {
            let url = await storageRef.getDownloadURL()
-           setUrl(url)
+           
            let createdAt = timestamp()
-           firestoreRef.add({url, createdAt})
+           await firestoreRef.add({url, createdAt})
+           setUrl(url)
         //    setProgress(0)
         })
         }
