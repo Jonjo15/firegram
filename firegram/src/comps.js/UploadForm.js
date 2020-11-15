@@ -1,12 +1,18 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ProgressBar from "./ProgressBar";
 import UseStorage from "../hooks/UseStorage"
+// import { useEffect } from "react/cjs/react.production.min";
 
 
 const UploadForm = () => {
     const [file, setFile] = useState(null)
     const [error, setError] = useState(null)
-    const {progress} = UseStorage(file)
+    const {progress, url} = UseStorage(file)
+    useEffect(() => {
+        if (url) {
+            setFile(null)
+        }
+    }, [url, setFile])
     const changeHandler = (e) => {
         // e.preventDefault()
         let doc = e.target.files[0];
@@ -26,7 +32,7 @@ const UploadForm = () => {
         {file && <p>{file.name}</p>}
         {error && <p>{error}</p>}
         </form>
-        <ProgressBar progress={progress}/>
+        {file && <ProgressBar progress={progress}/>}
     </div>
     )
 }

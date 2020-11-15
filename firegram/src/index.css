@@ -14,3 +14,7 @@ code {
 h1 {
   font-family: fantasy;
 }
+.progress-bar {
+  background-color: coral;
+  height: 5px;
+}
