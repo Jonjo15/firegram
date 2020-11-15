@@ -1,9 +1,9 @@
 import React from "react"
 
 const Header = () => {
-    return (<div>
-            <h2>Firegram</h2>
-            <h1>Your Pictures</h1>
+    return (<div className="title">
+            <h1>Firegram</h1>
+            <h2>Your Pictures</h2>
             <p>Lorem ipsum...
             </p>
         </div>        
