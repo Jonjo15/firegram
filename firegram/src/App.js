@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./comps.js/Header"
+import UploadForm from "./comps.js/UploadForm"
 
 function App() {
   // const [file, setFile] = useState(null)
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      
+      <UploadForm />
     </div>
   );
 }
