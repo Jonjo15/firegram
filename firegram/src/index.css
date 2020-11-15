@@ -9,3 +9,8 @@ body {
   font-family: "Noto Serif";
   color: var(--secondary);
 }
+.progress-bar {
+  background-color: var(--primary);
+  height: 5px;
+  margin-top: 20px;
+}
