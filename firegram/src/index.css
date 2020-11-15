@@ -18,3 +18,12 @@ h1 {
   background-color: coral;
   height: 5px;
 }
+
+.image-grid img {
+  height: 360px;
+  width: 360px;
+}
+.modal img {
+  height: 720px;
+  width: 720px;
+}
