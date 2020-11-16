@@ -8,3 +8,10 @@ body {
 form {
   text-align: center;
 }
+.add-button {
+  display: block;
+  margin: 20px auto;
+}
+input {
+  margin-right: 5px;
+}
