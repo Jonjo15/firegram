@@ -1,12 +1,13 @@
 import React, {useState} from "react"
 
-const UploadForm = () => {
+const UploadForm = ({ setShowForm }) => {
     const [author, setAuthor] = useState("")
     const [title, setTitle] = useState("")
     const [pages, setPages] = useState("")
     const [readStatus, setReadStatus] = useState(null)
     const submitHandler = (e) => {
         e.preventDefault()
+        setShowForm(false)
         console.log("hey")
     }
     return (
