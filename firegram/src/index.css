@@ -14,3 +14,11 @@ body {
   height: 5px;
   margin-top: 20px;
 }
+.image-grid {
+  margin: 60px auto;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  height: 100%;
+}

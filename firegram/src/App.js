@@ -1,5 +1,6 @@
 import React from "react"
 import Header from "./comps.js/Header"
+import ImageGrid from "./comps.js/ImageGrid"
 import UploadForm from "./comps.js/UploadForm"
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <UploadForm />
+      <ImageGrid />
     </div>
   );
 }
