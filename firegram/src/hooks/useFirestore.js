@@ -16,7 +16,7 @@ const useFirestore = (collection) => {
         })
 
         return () => unsub()
-    }, [collection, docs])
+    }, [collection])
 
     return {docs}
 }
