@@ -38,12 +38,6 @@ const UploadForm = ({ setShowForm, setShowButton }) => {
             </label>
             <button type="submit">Submit</button>
             {error &&<div className="error">{error}</div>}
-            <div className="test-output">
-                <p>{author}</p>
-                <p>{title}</p>
-                <p>{pages}</p>
-                <p>{readStatus}</p>
-            </div>
         </form>
     )
 }
