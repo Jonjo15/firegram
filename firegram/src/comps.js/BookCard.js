@@ -1,5 +1,6 @@
 import React from "react"
 import {projectFirestore } from "../firebase/config"
+import {motion} from "framer-motion"
 // import BooksDisplay from "./BooksDisplay"
 
 const BookCard = ({data}) => {
@@ -27,12 +28,12 @@ const BookCard = ({data}) => {
         });
     }
     return (
-        <div className="book-card">
+        <motion.div layout whileHover={{opacity:1}} className="book-card">
             <h2>{data.title} by {data.author}</h2>
             <h3>{data.pages} pages</h3>
             <button onClick={handleClickRead}>{data.readStatus}</button>
             <button onClick={handleRemove}>Remove</button>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 body {
   font-family: "Noto Serif";
+  background-color: darkgray;
 }
 .header h1 {
   text-align: center;
@@ -14,4 +15,24 @@ form {
 }
 input {
   margin-right: 5px;
+}
+.book-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.book-card button {
+  display: block;
+  margin: 10px auto;
+}
+.book-card h3,
+.book-card h2 {
+  text-align: center;
+}
+.book-card {
+  border: 1px solid rgb(199, 6, 6);
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: wheat;
+  opacity: 0.8;
 }

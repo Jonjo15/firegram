@@ -5,7 +5,7 @@ import BookCard from "./BookCard";
 const BooksDisplay = () => {
     const {docs} = useFirestore("books");
     return (
-        <div>
+        <div className="book-grid">
             {docs && docs.map((ele) => <BookCard key={ele.id} data={ele}/>)}
         </div>
     )
