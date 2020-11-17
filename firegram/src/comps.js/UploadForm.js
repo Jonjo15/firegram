@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import {projectFirestore, timestamp} from "../firebase/config"
+import {motion} from "framer-motion"
 const UploadForm = ({ setShowForm, setShowButton }) => {
     const [author, setAuthor] = useState("")
     const [title, setTitle] = useState("")
@@ -21,7 +22,7 @@ const UploadForm = ({ setShowForm, setShowButton }) => {
         // console.log("hey")
     }
     return (
-        <form onSubmit={submitHandler}>
+        <motion.form initial={{y: "-100vh"}} animate={{y: 0}} onSubmit={submitHandler}>
             <label>
                 <input required value={author} type="text" placeholder="Author" onChange={(e) => setAuthor(e.target.value)}/>
                 <input required value={title} type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)}/>
@@ -38,7 +39,7 @@ const UploadForm = ({ setShowForm, setShowButton }) => {
             </label>
             <button type="submit">Submit</button>
             {error &&<div className="error">{error}</div>}
-        </form>
+        </motion.form>
     )
 }
 export default UploadForm
